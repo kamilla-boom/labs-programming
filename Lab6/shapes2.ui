@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Shapes2.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuShapes">
+    <property name="title">
+     <string>Choose a shape</string>
+    </property>
+    <addaction name="actionCircle"/>
+    <addaction name="actionSquare"/>
+    <addaction name="actionTriangle"/>
+   </widget>
+   <widget class="QMenu" name="menuColor">
+    <property name="title">
+     <string>Choose a color</string>
+    </property>
+    <addaction name="actionColor"/>
+   </widget>
+   <widget class="QMenu" name="menuDelete">
+    <property name="title">
+     <string>Delete all</string>
+    </property>
+    <addaction name="actionDelete"/>
+   </widget>
+   <widget class="QMenu" name="menuGroup">
+    <property name="title">
+     <string>Group and ungroup</string>
+    </property>
+    <addaction name="actionGroup"/>
+    <addaction name="actionUngroup"/>
+   </widget>
+   <widget class="QMenu" name="menuSave">
+    <property name="title">
+     <string> Save and load</string>
+    </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionLoad"/>
+   </widget>
+   <addaction name="menuShapes"/>
+   <addaction name="menuColor"/>
+   <addaction name="menuDelete"/>
+   <addaction name="menuGroup"/>
+   <addaction name="menuSave"/>
+  </widget>
+  <action name="actionCircle">
+   <property name="text">
+    <string>Circle</string>
+   </property>
+  </action>
+  <action name="actionSquare">
+   <property name="text">
+    <string>Square</string>
+   </property>
+  </action>
+  <action name="actionTriangle">
+   <property name="text">
+    <string>Triangle</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </action>
+  <action name="actionGroup">
+   <property name="text">
+    <string>Group</string>
+   </property>
+  </action>
+  <action name="actionUngroup">
+   <property name="text">
+    <string>Ungroup</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
