@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Shapes</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuShapes">
+    <property name="title">
+     <string>Choose a shape</string>
+    </property>
+    <addaction name="actionCircle"/>
+    <addaction name="actionSquare"/>
+    <addaction name="actionTriangle"/>
+   </widget>
+   <widget class="QMenu" name="menuColor">
+    <property name="contextMenuPolicy">
+     <enum>Qt::ActionsContextMenu</enum>
+    </property>
+    <property name="title">
+     <string>Choose a color</string>
+    </property>
+    <addaction name="actionColor"/>
+   </widget>
+   <widget class="QMenu" name="menuDeselect_with_the_right_mouse_button">
+    <property name="title">
+     <string>Deselect with the right mouse button</string>
+    </property>
+   </widget>
+   <addaction name="menuShapes"/>
+   <addaction name="menuColor"/>
+   <addaction name="menuDeselect_with_the_right_mouse_button"/>
+  </widget>
+  <action name="actionCircle">
+   <property name="text">
+    <string>Circle</string>
+   </property>
+  </action>
+  <action name="actionSquare">
+   <property name="text">
+    <string>Square</string>
+   </property>
+  </action>
+  <action name="actionTriangle">
+   <property name="text">
+    <string>Triangle</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
