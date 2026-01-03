@@ -1,0 +1,62 @@
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+
+    def __init__(self, x, y, color = None):
+        self._x = x
+        self._y = y
+        self._color = color
+        self._selected = False
+        self._last_dx = 0
+        self._last_dy = 0
+
+
+    def set_selected(self, selected):
+        self._selected = selected
+
+    def is_selected(self):
+        return self._selected
+
+    def set_color(self, color):
+        self._color = color
+
+    def move(self, dx, dy, canvas_rect = None):
+        self._last_dx = dx
+        self._last_dy = dy
+
+        self._x += dx
+        self._y += dy
+
+    def last_move(self):
+        return self._last_dx, self._last_dy
+
+    def set_position(self, x, y):
+        self._x = x
+        self._y = y
+
+    def get_position(self):
+        return self._x, self._y
+
+    def check_bounds(self, canvas_rect):
+        bounds = self.get_bounds()
+        return canvas_rect.contains(bounds)
+
+    def resize(self, delta): pass
+
+    @abstractmethod
+    def get_bounds(self): pass
+
+    @abstractmethod
+    def draw(self, painter): pass
+
+    @abstractmethod
+    def contains_point(self, pos): pass
+
+    @abstractmethod
+    def save(self, stream): pass
+
+    @abstractmethod
+    def load(self, stream, factory): pass
+
+    @abstractmethod
+    def type_shape(self): pass
